@@ -1,0 +1,41 @@
+{
+  "name": "CassandraDeleteRecord",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "description": "CassandraDB Connection activity to delete records",
+  "title": "CassandraDBDelete",  
+  "ref": "github.com/dhire05/cassandradeleterecord",
+
+  "inputs":[
+    {
+      "name": "ClusterIP",
+      "type": "string",
+      "value": "127.0.0.1",
+	  "required": true
+    },
+	{
+      "name": "Keyspace",
+      "type": "string",
+      "value": "sample",
+	  "required": true
+    },
+	{
+      "name": "TableName",
+      "type": "string",
+      "value": "employee",
+	  "required": true
+    },
+	{
+      "name": "Where",
+      "type": "string",
+      "value": "empid = 104",
+	  "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "any"
+    }
+  ]
+}
